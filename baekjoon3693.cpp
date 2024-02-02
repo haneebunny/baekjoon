@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <utility>
 
 using namespace std;
 
@@ -9,26 +10,47 @@ typedef long long ll;
 int main() {
 
 
+    // 0. 컨테이너 개수 입력 받기
+    int N;
+    cin >> N; 
+
+    int n = N;
+
+    // 0. pair 클래스 생성
+
+    pair<int, int> pair;
+
+    // 1. 순서쌍 구하기
+    for (int = 1; i < n; i++) {
+        int j = ceil(n / i); // 가로에 몇 개(i)들어가는 지 알면 세로는 최소 몇 개여야 하는 지 구할 수 있다. 
+        pair.append([i,j]);
+    }
+
+
+    // 2. 길이로 변환, 면적 구하기
+
+    
+
+    // 3. 면적이 최소인 순서쌍 구하기
+
+    // 적당히 큰 수로 설정
+    int area = 100000; 
+    int idx = 100000; 
+
+    for (int i = 1; i < n ; i++) {
+
+        // area보다 작으면, 즉 cal_area가 더 최적이라면, 
+        if (area > cal_area) {
+            area = cal_area; 
+            idx = i; 
+        }
+    }
+
+    // pair[idx] 가 best choice 
     int test_cases;
     cin >> test_cases;
 
-    // 가장 좋은 주차장의 길이와 너비를 구하기 위해
-    while (test_cases--) {
-
-        ll n; // 컨테이너 갯수 n
-        cin >> n;
-
-        // 5개 묶음 처리
-        n = (n + 4) / 5;
-
-        // 같은 둘레의 최대 넓이 -> 정사각형일 때(가장 이상적)
-        ll optimum = (int)sqrt(2 * n);
-
-        // 그러나 정사각형엔 넣을 수 없으니, 최선의 길이와 너비를 찾아야 하는데 . ..
-       
-
-       
-    }
+ 
 
     return 0;
 }
